@@ -46,7 +46,7 @@ class GameController extends Controller
         return redirect()->route('game.battle', $game->id);
     }
 
-    // --- SEÇÃO DE BATALHA CORRIGIDA ---
+    // --- SEÇÃO DE BATALHA ---
     public function battle(Game $game)
     {
         // 1. Tenta encontrar a Batalha da fase atual do jogo
