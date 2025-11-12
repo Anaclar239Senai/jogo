@@ -7,7 +7,7 @@
         <div class="absolute inset-0 bg-black opacity-60"></div>
         <div class="relative text-center">
             <h1 class="text-6xl font-bold medieval-text blood-text flame-animation mb-6">
-                ⚔️ BATALHA ELEMENTAL ⚔️
+                ⚔️ GUARDIÃO DE ELARION ⚔️
             </h1>
             <p class="text-2xl text-yellow-200 medieval-text">
                 Um mundo onde apenas os fortes sobrevivem
@@ -126,7 +126,7 @@
         <!-- Rodapé -->
         <div class="text-center mt-16 pt-8 border-t border-yellow-800">
             <p class="text-yellow-600 medieval-text">
-                🏰 Batalha Elemental - Um mundo de trevas e glória
+                🏰 Batalha Elemental - Ana Clara, Estella e Glória
             </p>
         </div>
     </div>
