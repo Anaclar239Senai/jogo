@@ -8,10 +8,10 @@
 
     // Mapeamento de Inimigos (Deve espelhar a lógica do ElementalBattleService)
     $enemyMap = [
-        1 => ['name' => 'Guardião da Terra', 'element' => 'terra', 'health' => 20, 'emoji' => '🏔️'],
-        2 => ['name' => 'Mestre das Águas', 'element' => 'agua', 'health' => 25, 'emoji' => '🌊'],
-        3 => ['name' => 'Lorde do Fogo', 'element' => 'fogo', 'health' => 30, 'emoji' => '🔥'],
-        4 => ['name' => 'Deus do Ar', 'element' => 'ar', 'health' => 40, 'emoji' => '🌪️'],
+        1 => ['name' => 'Guardião da Terra', 'element' => 'terra', 'health' => 25, 'emoji' => '🏔️'],
+        2 => ['name' => 'Mestre das Águas', 'element' => 'agua', 'health' => 35, 'emoji' => '🌊'],
+        3 => ['name' => 'Lorde do Fogo', 'element' => 'fogo', 'health' => 45, 'emoji' => '🔥'],
+        4 => ['name' => 'Deus do Ar', 'element' => 'ar', 'health' => 60, 'emoji' => '🌪️'],
     ];
 
     $currentEnemy = $enemyMap[$battle->phase] ?? $enemyMap[1]; // Fallback
@@ -232,10 +232,11 @@
             <p class="text-3xl font-bold text-white mb-4">🏆 CAMPEÃO DOS ELEMENTOS! 🏆</p>
             <p class="text-xl text-yellow-200">Você dominou todos os 4 elementos e se tornou uma lenda!</p>
         </div>
-        <a href="{{ route('game.complete', $game->id) }}" 
-           class="inline-block bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-white font-bold py-4 px-12 rounded-2xl text-2xl transition-all duration-300 transform hover:scale-110 shadow-2xl">
-            🎊 VER CONQUISTAS 🎊
-        </a>
+        <a href="{{ url('/game/' . $game->id . '/achievements') }}" 
+            class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 inline-flex items-center">
+             <i class="fas fa-trophy mr-2"></i>
+             VER CONQUISTAS 🌬
+         </a>
         @else
         <a href="{{ route('game.battle', $game->id) }}" 
            class="inline-block bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-4 px-12 rounded-2xl text-2xl transition-all duration-300 transform hover:scale-110 shadow-2xl">
